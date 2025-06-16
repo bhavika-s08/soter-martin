@@ -8,7 +8,7 @@ from flask_bcrypt import Bcrypt
 app = Flask(__name__)
 
 # configure app -----------------------------------------------------------------------------------------------------------------------
-app.config['SECRET_KEY'] = 'pinkpantheress' # ♡
+app.config['SECRET_KEY'] = 'changeme'
 login_manager = LoginManager(app)
 login_manager.login_view = 'login'                         
 bcrypt = Bcrypt(app)
