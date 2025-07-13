@@ -1,0 +1,53 @@
+{% extends 'base.html' %}
+{% block title %} Soter-Martin {% endblock %}
+
+{% block content %}
+
+<h1> Contact Us </h1>
+  <form method="post" enctype="multipart/form-data">
+
+    <label for="name"> Name: </label>
+    <input type="text" name="name">
+
+    <br><br>
+
+    <label for="company-name"> Company Name: </label>
+    <input type="text" name="company-name">
+
+    <br><br>
+    
+    <label for="job-title"> Job Title: </label>
+    <input type="text" name="job-title">
+
+    <br><br>
+
+    <label for="email"> Email: </label>
+    <input type="text" name="email">
+
+    <br><br>
+
+    <label for="phone"> Phone: </label>
+    <input type="text" name="phone">
+
+    <br><br>
+
+    <label for="location"> Location: </label>
+    <input type="text" name="location">
+
+    <label for="assistance-with"> Assistance With: </label>
+    <input type="checkbox" name="assistance-with" value="Quote">
+    <input type="checkbox" name="assistance-with" value="Order">
+    <input type="checkbox" name="assistance-with" value="Pricing">
+    <input type="checkbox" name="assistance-with" value="Product Support">
+
+    <label for="mailing-list"> Subscribe to Mailing List? </label>
+    <input type="checkbox" name="mailing-list" value="Yes">
+
+    <label for="mailing-list"> Subscribe to Mailing List? </label>
+    <input type="checkbox" name="mailing-list" value="Yes">
+
+    <br><br>
+    <button type="submit"> ✧ submit ✧ </button>
+  </form>
+
+{% endblock %}

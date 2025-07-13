@@ -1,0 +1,34 @@
+{% extends 'base.html' %}
+{% block title %} Soter-Martin {% endblock %}
+
+{% block content %}
+
+    <!-- landing page image  -->
+    <section id="landing-img">
+        <img src="{{ url_for('static', filename='images/soter-martin-landing.png') }}" alt="Soter-Martin Landing Image" id="logo">
+    </section>
+
+    <!-- catchphrase -->
+    <section id="welcome-section">
+        <h1 id="h1-landing"> Since 1975... </h1>
+        <p id="p-landing"> we are dedicated to delivering exceptional representation for our manufacturers by fostering strong relationships and prioritizing customer satisfaction. </p>
+    </section>
+
+    <!-- core values -->
+    <p> Soter-Martin is a trusted partner providing professional sales and marketing solutions tailored to the plumbing industry across the Mid-Atlantic region. </p>
+    <section id="core-values">
+        <h1>We value... </h1>
+        <div id="values-container">
+            <div class="value" id="communication">
+                <h2>Communication.</h2>
+            </div>
+            <div class="value" id="customer-service">
+                <h2>Customer Service.</h2>
+            </div>
+            <div class="value" id="reliability">
+                <h2>Reliability.</h2>
+            </div>
+        </div>
+    </section>
+
+{% endblock %}
