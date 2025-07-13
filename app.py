@@ -67,15 +67,10 @@ def load_user(user_id):
 def index():
     return render_template('index.html')
 
-# meet the team route --------------------------------------------------------------------------------------------------------------------------
+# meet-the-team route --------------------------------------------------------------------------------------------------------------------------
 @app.route('/meet-the-team')
 def meet_the_team():
     return render_template('meet-the-team.html')
-
-# contact route --------------------------------------------------------------------------------------------------------------------------
-@app.route('/contact')
-def contact():
-    return render_template('contact-us.html')
 
 # contact-us route --------------------------------------------------------------------------------------------------------------------------
 @app.route('/contact-us')
