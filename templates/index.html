@@ -3,9 +3,13 @@
 
 {% block content %}
 
-    <!-- landing page image  -->
-    <section id="landing-img">
+   <section id="landing-img">
         <img src="{{ url_for('static', filename='images/soter-martin-landing.png') }}" alt="Soter-Martin Landing Image" id="logo">
+        <div class="card">
+            <img src="{{ url_for('static', filename='images/soter-martin-logo-white-bg.png') }}" alt="Logo" class="card-logo">
+            <p class="card-text"> More than a Rep...</p>
+            <p class="card-text"> We are your Strategic Partner.</p>
+        </div>
     </section>
 
     <!-- catchphrase -->
