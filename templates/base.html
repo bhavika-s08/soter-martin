@@ -4,22 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title> Soter-Martin </title>
-</head>
-<body>
-    
-</body>
-</html>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> Soter-Martin </title>
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet">
-    <script src="{{ url_for('static', filename='script.js') }}"></script>
+    <script src="{{ url_for('static', filename='script.js') }}" defer></script>
 </head>
 <body>
     <!-- navbar -->
@@ -32,18 +21,17 @@
             <li class="dropdown">
                 <a href="#">Our Partners ▾</a>
                 <ul class="dropdown-menu">
-                    <li><a href="{{ url_for('index') }}">Manufacturers</a></li>
-                    <li><a href="{{ url_for('index') }}">Architects/Engineers</a></li>
+                    <li><a href="{{ url_for('manufacturers') }}">Manufacturers</a></li>
+                    <li><a href="{{ url_for('architects_engineers') }}">Architects/Engineers</a></li>
+                    <li><a href="{{ url_for('associations') }}">Associations</a></li>
                 </ul>
             </li>
 
-            <li><a href="{{ url_for('index') }}">Minimum Order, Freight Allowance</a></li>
-
-            <li><a href="{{ url_for('index') }}">Associations</a></li>
+            <li><a href="{{ url_for('min_order_freight_allowance') }}">Minimum Order, Freight Allowance</a></li>
 
             <li><a href="{{ url_for('contact_us') }}">Contact Us</a></li>
 
-            <li><a href="{{ url_for('index') }}">804-500-2164</a></li>
+            <li id="phone-number"><a>804-500-2164</a></li>
         </ul>
     </nav>
 
@@ -68,6 +56,8 @@
             <a href="https://www.facebook.com/soter_martin" target="_blank">Facebook</a>,
             <a href="https://www.instagram.com/soter_martin" target="_blank">Instagram</a>
         </p>
+
+        <p> Celebrating X years. </p>
     </footer>
 </body>
 </html>

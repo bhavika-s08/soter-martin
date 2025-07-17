@@ -72,6 +72,26 @@ def index():
 def meet_the_team():
     return render_template('meet-the-team.html')
 
+# our partners: manufacturers route --------------------------------------------------------------------------------------------------------------------------
+@app.route('/manufacturers')
+def manufacturers():
+    return render_template('manufacturers.html')
+
+# our partners: manufacturers route --------------------------------------------------------------------------------------------------------------------------
+@app.route('/architects-engineers')
+def architects_engineers():
+    return render_template('architects-engineers.html')
+
+# our partners: associations route --------------------------------------------------------------------------------------------------------------------------
+@app.route('/associations')
+def associations():
+    return render_template('associations.html')
+
+# minimum order, freight allowance route --------------------------------------------------------------------------------------------------------------------------
+@app.route('/min_order_freight_allowance')
+def min_order_freight_allowance():
+    return render_template('min_order_freight_allowance.html')
+
 # contact-us route --------------------------------------------------------------------------------------------------------------------
 @app.route('/contact-us')
 def contact_us():
