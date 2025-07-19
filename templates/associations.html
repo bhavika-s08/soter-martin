@@ -3,9 +3,49 @@
 
 {% block content %}
 
-<section id="left-side-associations"> 
-    
+<!-- introduction text -->
+<section id="intro-text">
+    <h1> Associations </h1>
 </section>
+
+<!-- gallery view for associations -->
+<section class="container">
+    
+    <!-- main box -->
+    <div class="slider-wrapper">
+        <div class="slider" id="slider">
+
+            <!-- placeholder for association logo --> 
+            <img id="slide-img" src=""/> 
+
+            <!-- placeholder for association name --> 
+            <h3 id="slide-heading"> </h3>
+        
+            <!-- placeholder for association description --> 
+            <div id="p-tag-width"> 
+                <p id="slide-text"> </p>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- next button -->
+    <button id="next-btn"> ➜ </button>
+
+</section>
+
+<script>
+  const slides = 
+  [
+    ["{{ url_for('static', filename='images/aspe-logo.png') }}", "American Society of Plumbing Engineers", "ASPE is dedicated to the advancement of the science of plumbing engineering, to the professional growth and advancement of its members and the health, welfare and safety of the public."],
+    ["{{ url_for('static', filename='images/vwwa-logo.png') }}", "Virginia Water Well Association", "Your Partner in Groundwater Excellence. Dedicated to enhancing well construction and water resource protection."],
+    ["{{ url_for('static', filename='images/aimr-logo.png') }}", "The Association of Independent Manufacturers Representatives (AIM/R)", "AIM/R is dedicated to enhancing the quality, value, and voice of the professional manufacturers' representative in the plumbing, heating and cooling industry."],
+    ["{{ url_for('static', filename='images/mana-logo.png') }}", "Manufacturer's Agents National Association (MANA)", "MANA is a 501(c)6 non-profit association dedicated to supporting independent manufacturers' representatives in the United States. Successfully connecting reps and manufacturers since 1947, MANA also advances the professionalism and effectiveness of independent manufacturers' representatives through education, networking, and advocacy."],
+    ["{{ url_for('static', filename='images/nahb-logo.png') }}", "National Association of Home Builders (NAHB)", "The NAHB strives to protect the American Dream of housing opportunities for all, while working to achieve professional success for its members who build communities, create jobs and strengthen our economy."]
+  ];
+</script>
+
+<script src="{{ url_for('static', filename='js/slider.js') }}"></script>
 
 
 {% endblock %}

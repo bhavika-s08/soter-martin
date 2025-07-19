@@ -1,19 +1,30 @@
-function communication_card() 
+// code for associations.html ------------------------------------------------------
+
+// constants for image, heading, and paragraph for each slide
+const imgEl = document.getElementById('slide-img');
+const headingEl = document.getElementById('slide-heading');
+const textEl = document.getElementById('slide-text');
+
+// constant for the "next" button
+const nextBtn = document.getElementById('next-btn');
+
+// index to track position in list
+let currentIndex = 0;
+
+
+function updateSlide(index) 
 {
-    const card1 = document.getElementById('communication');
-
-    card1.addEventListener('mouseover', function() {
-        // Clear the card and show "hi"
-        card1.innerHTML = '';  
-        let p = document.createElement('p');
-        p.innerHTML = "hi";
-        card1.appendChild(p);
-    });
-
-    card1.addEventListener('mouseout', function() {
-        // Reset back to original message
-        card1.innerHTML = "Communication.";
-    });
+  const [img, heading, text] = slides[index];
+  imgEl.src = img;
+  headingEl.textContent = heading;
+  textEl.textContent = text;
 }
 
-communication_card();
+// Show first slide initially
+updateSlide(currentIndex);
+
+// Next button moves to next slide, loops around
+nextBtn.addEventListener('click', () => {
+  currentIndex = (currentIndex + 1) % slides.length;
+  updateSlide(currentIndex);
+});
