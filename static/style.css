@@ -1,4 +1,4 @@
-/* general css */ 
+/* ------------------------- general css ------------------------- */ 
 
 *
 {
@@ -19,11 +19,11 @@ body
   font-style: normal;
 }
 
-/* navbar css */
+/* ------------------------- navbar css ------------------------- */
 
 #logo-navbar 
 {
-    max-width: 200px;
+    max-width: 170px;
     height: auto;
     padding: 10px;
     padding-left: 20px;
@@ -31,7 +31,7 @@ body
 
 nav li:first-child a 
 {
-    padding: 0;
+    padding: 0px;
 }
 
 nav ul 
@@ -39,7 +39,7 @@ nav ul
     list-style: none;
     display: flex;
     align-items: center; 
-    background-color: #0b1975;
+    background-color: #0a1769;
 }
 
 nav li 
@@ -78,7 +78,7 @@ nav a:hover
     white-space: nowrap;
 }
 
-.dropdown:hover .dropdown-menu 
+.dropdown:hover .dropdown-menu
 {
     display: flex;
 }
@@ -116,6 +116,8 @@ nav a:hover
     flex-wrap: wrap;
     background-color: #0a1769;
 }
+
+/* ------------------------- footer css ------------------------- */ 
 
 footer
 {
@@ -160,12 +162,12 @@ footer
 
 .card 
 {
-    z-index: 2;
+    z-index: 1;
     position: absolute; 
-    top: 166px;          
-    left: 715px;
-    width: 756px;
-    height: 396px;
+    top: 190px;          
+    left: 770px;
+    width: 680px;
+    height: 400px;
     border-radius: 30px;
     background: #11207e;
     box-shadow: 15px 15px 30px #474747, -15px -15px 30px #484848;
@@ -193,15 +195,12 @@ footer
   font-weight: bold;
 }
 
-@keyframes glow 
-{
-  0% 
-  {
-    box-shadow: 0 0 100px #ffffff, 0 0 40px #ffffff;
+@keyframes glow {
+  0% {
+    box-shadow: 0 0 50px #ffffff, 0 0 20px #ffffff;
   }
-  100%
-  {
-    box-shadow: 0 0 100px #0b1975, 0 0 80px #0b1975;
+  100% {
+    box-shadow: 0 0 50px #0b1975, 0 0 40px #0b1975;
   }
 }
 
@@ -209,6 +208,9 @@ footer
 {
     text-align: center;
     padding: 20px;
+    font-weight: bolder;
+    font-size: 30px;
+    text-transform: uppercase;
 }
 
 .center
@@ -304,3 +306,93 @@ footer
     width: 40rem;
 }
 
+
+
+
+.manufacturers-card1 {
+  height: 150px;
+  width: 250px;
+  background-image: linear-gradient(163deg, #3c4791 0%, #3c4791 100%);
+  border-radius: 20px;
+  transition: all .3s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.manufacturers-card1 img {
+    max-width: 70%;
+    height: auto;
+    display: block;
+}
+
+.manufacturers-card2 {
+    height: 150px;
+    width: 250px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    transition: all .2s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.manufacturers-card2 img {
+    max-width: 80%;
+    max-height: 80%;
+    object-fit: contain;
+}
+
+.manufacturers-card2 a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+.manufacturers-card2:hover {
+  transform: scale(0.95);
+  border-radius: 20px;
+}
+
+.manufacturers-card:hover {
+  box-shadow: 0px 0px 30px 1px #3c4791;
+}
+
+.manufacturers-section
+{
+    display: flex;
+    flex-wrap: wrap;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    justify-content: space-evenly;
+}
+
+.manufacturer-domain-text
+{
+    background-color: #a3aadd;
+    color: #04105d;
+    text-align: center;
+    padding: 5px;
+    font-weight: bolder;
+}
+
+.image-center 
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+}
+
+
+#meet-the-team-intro
+{
+    text-align: center;
+    size: 15px;
+}

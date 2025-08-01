@@ -3,18 +3,38 @@
 
 {% block content %}
 
-<label for="manufacturer-select"> Select a Manufacturer to Learn More! </label>
+<h2 id="intro-text"> Minimum Order, Freight Allowance </h2>
+
 <!-- dropdown to pick one-->
+<label for="manufacturer-select"> Select a Manufacturer to Learn More! </label>
 <select id="manufacturer-select">
-    <option value=""> -- Select Manufacturer -- </option>
-    <option value="Aker">Aker</option>
+    <option value="">-- Select Manufacturer --</option>
+    <option value="Aker">AKER by MAAX</option>
     <option value="Boshart">Boshart</option>
     <option value="Briggs">Briggs</option>
     <option value="Cello">Cello</option>
     <option value="Comfort Designs">Comfort Designs</option>
+    <option value="Ekern">Ekern</option>
+    <option value="Elcoma">Elcoma</option>
+    <option value="Endot">Endot</option>
+    <option value="FEDPRO">FEDPRO</option>
+    <option value="Flood Buzz">Flood Buzz</option>
+    <option value="Greenfield">Greenfield</option>
+    <option value="JB Products">JB Products</option>
+    <option value="MAAX">MAAX</option>
+    <option value="Pioneer">Pioneer</option>
+    <option value="Stiebel Eltron">Stiebel Eltron</option>
+    <option value="Tigre">Tigre</option>
+    <option value="Xylem">Xylem (includes Laing)</option>
 </select>
 
-<!-- checkboxes to pick multiple and compare-->
+
+
+<!-- Add a submit button -->
+<button id="submit-btn">Submit</button>
+
+<!-- Where the result will be displayed -->
+<div id="result-display" style="margin-top: 20px;"></div>
 
 
 {% endblock %}
