@@ -3,48 +3,69 @@
 
 {% block content %}
 
-<h1> Contact Us </h1>
-  <form method="post" enctype="multipart/form-data">
+<!-- introduction text -->
+<h1 id="intro-text"> Contact Us </h1>
 
-    <label for="name"> Name: </label>
-    <input type="text" name="name">
+<form method="post" enctype="multipart/form-data">
 
-    <br><br>
+  <div class="form-grid">
 
-    <label for="company-name"> Company Name: </label>
-    <input type="text" name="company-name">
+    <div class="form-group">
+      <label for="name">Name:</label>
+      <input type="text" name="name" id="name">
+    </div>
 
-    <br><br>
-    
-    <label for="job-title"> Job Title: </label>
-    <input type="text" name="job-title">
+    <div class="form-group">
+      <label for="company-name">Company Name:</label>
+      <input type="text" name="company-name" id="company-name">
+    </div>
 
-    <br><br>
+    <div class="form-group">
+      <label for="job-title">Job Title:</label>
+      <input type="text" name="job-title" id="job-title">
+    </div>
 
-    <label for="email"> Email: </label>
-    <input type="text" name="email">
+    <div class="form-group">
+      <label for="email">Email:</label>
+      <input type="text" name="email" id="email">
+    </div>
 
-    <br><br>
+    <div class="form-group">
+      <label for="phone">Phone:</label>
+      <input type="text" name="phone" id="phone">
+    </div>
 
-    <label for="phone"> Phone: </label>
-    <input type="text" name="phone">
+    <div class="form-group">
+      <label for="location">Location:</label>
+      <input type="text" name="location" id="location">
+    </div>
 
-    <br><br>
+    <div class="form-group assistance-with">
+    <label>Assistance With:</label>
+      <div class="checkbox-row">
+        <label><input type="checkbox" name="assistance-with" value="Quote"> Quote</label>
+        <label><input type="checkbox" name="assistance-with" value="Order"> Order</label>
+      </div>
+      <div class="checkbox-row">
+        <label><input type="checkbox" name="assistance-with" value="Pricing"> Pricing</label>
+        <label><input type="checkbox" name="assistance-with" value="Product Support"> Product Support</label>
+      </div>
+    </div>
 
-    <label for="location"> Location: </label>
-    <input type="text" name="location">
+    <div class="form-group mailing-list">
+      <label for="mailing-list">Subscribe to Mailing List?</label>
+      <label><input type="checkbox" name="mailing-list" value="Yes" id="mailing-list"> Yes</label>
+    </div>
 
-    <label for="assistance-with"> Assistance With: </label>
-    <input type="checkbox" name="assistance-with" value="Quote">
-    <input type="checkbox" name="assistance-with" value="Order">
-    <input type="checkbox" name="assistance-with" value="Pricing">
-    <input type="checkbox" name="assistance-with" value="Product Support">
+    <div class="form-group full-width">
+      <label for="comments">Additional Comments:</label>
+      <textarea name="comments" id="comments" rows="2"></textarea>
+    </div>
 
-    <label for="mailing-list"> Subscribe to Mailing List? </label>
-    <input type="checkbox" name="mailing-list" value="Yes">
+  </div>
 
-    <br><br>
-    <button type="submit"> Submit</button>
-  </form>
+  <button type="submit">Submit</button>
+
+</form>
 
 {% endblock %}

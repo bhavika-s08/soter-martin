@@ -5,36 +5,55 @@
 
 <h2 id="intro-text"> Minimum Order, Freight Allowance </h2>
 
-<!-- dropdown to pick one-->
-<label for="manufacturer-select"> Select a Manufacturer to Learn More! </label>
-<select id="manufacturer-select">
-    <option value="">-- Select Manufacturer --</option>
-    <option value="Aker">AKER by MAAX</option>
-    <option value="Boshart">Boshart</option>
-    <option value="Briggs">Briggs</option>
-    <option value="Cello">Cello</option>
-    <option value="Comfort Designs">Comfort Designs</option>
-    <option value="Ekern">Ekern</option>
-    <option value="Elcoma">Elcoma</option>
-    <option value="Endot">Endot</option>
-    <option value="FEDPRO">FEDPRO</option>
-    <option value="Flood Buzz">Flood Buzz</option>
-    <option value="Greenfield">Greenfield</option>
-    <option value="JB Products">JB Products</option>
-    <option value="MAAX">MAAX</option>
-    <option value="Pioneer">Pioneer</option>
-    <option value="Stiebel Eltron">Stiebel Eltron</option>
-    <option value="Tigre">Tigre</option>
-    <option value="Xylem">Xylem (includes Laing)</option>
-</select>
+<h4 class="center-text"> Add as many manufacturers as you'd like to compare their minimum order requirement and freight allowance, and clear once done! </h4>
+<br>
 
+<section id="center-section">
 
+    <!-- dropdown to pick one--> 
+    <select id="manufacturer-select">
+        <option value="">-- Select Manufacturer --</option>
+        <option value="Aker"> AKER by MAAX </option>
+        <option value="Boshart"> Boshart </option>
+        <option value="Briggs"> Briggs </option>
+        <option value="Cello"> Cello </option>
+        <option value="Comfort Designs"> Comfort Designs </option>
+        <option value="Ekern"> Ekern </option>
+        <option value="Elcoma"> Elcoma </option>
+        <option value="Endot"> Endot </option>
+        <option value="FEDPRO"> FEDPRO </option>
+        <option value="Flood Buzz"> Flood Buzz </option>
+        <option value="Greenfield"> Greenfield </option>
+        <option value="JB Products"> JB Products </option>
+        <option value="MAAX"> MAAX </option>
+        <option value="Pioneer"> Pioneer </option>
+        <option value="Stiebel Eltron"> Stiebel Eltron </option>
+        <option value="Tigre"> Tigre </option>
+        <option value="Xylem"> Xylem </option>
+    </select>
 
-<!-- Add a submit button -->
-<button id="submit-btn">Submit</button>
+    <!-- add and clear buttons  -->
+    <button id="submit-btn"> Add </button>
+    <button id="clear-btn"> Clear </button>
 
-<!-- Where the result will be displayed -->
-<div id="result-display" style="margin-top: 20px;"></div>
+</section>
+
+<!-- table where manufacturer data will go -->
+
+<section id="table-section">
+    <table id="result-table">
+        <thead>
+            <tr>
+                <th>Manufacturer</th>
+                <th>Minimum Order Requirement</th>
+                <th>Freight Allowance</th>
+            </tr>
+        </thead>
+        <tbody id="table-body">
+            <!-- JS will append rows here -->
+        </tbody>
+    </table>
+</section>
 
 
 {% endblock %}

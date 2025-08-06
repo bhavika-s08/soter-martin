@@ -3,28 +3,48 @@
 
 {% block content %}
 
-    <!-- introductory text -->
-    <h2 id="intro-text"> Meet The Team </h2>
+<!-- introductory text -->
+<h2 id="intro-text"> Meet The Team </h2>
+<p id="meet-the-team-intro"> Our team is composed of dedicated professionals who are passionate about providing exceptional service to our clients. </p>
 
-    <p id="meet-the-team-intro"> Our team is composed of dedicated professionals who are passionate about providing exceptional service to our clients. </p>
-
-    <!-- images -->
-    <section id="meet-the-team-images">
-        <div class="team-member">
-            <img src="{{ url_for('static', filename='images/team-member-1.jpg') }}" alt="Team Member 1">
-            <h2>Mike Martin</h2>
-            <p>Sales Manager</p>
-        </div>
-        <div class="team-member">
-            <img src="{{ url_for('static', filename='images/team-member-2.jpg') }}" alt="Team Member 2">
-            <h2>Jane Smith</h2>
-            <p>Marketing Specialist</p>
-        </div>
-        <div class="team-member">
-            <img src="{{ url_for('static', filename='images/team-member-3.jpg') }}" alt="Team Member 3">
-            <h2>Emily Johnson</h2>
-            <p>Customer Service Representative</p>
-        </div>
-    </section>
+<!-- images -->
+<section id="meet-the-team-images">
+    <div class="team-member">
+        <img src="{{ url_for('static', filename='images/team-members/mike-martin.jpg') }}" alt="Mike Martin">
+        <h3>Mike Martin</h3>
+        <h2>CPMR - President</h2>
+        <p>With over 35 years of experience in the plumbing industry, Mike is a seasoned Business Development Leader and industry expert. He has a proven track record of cultivating strong, strategic partnerships, particularly within the mid-Atlantic market. Starting his career with Lewis Supply Company and Noland Company, he joined Soter-Martin in 1997, where he has since excelled in driving growth and building lasting relationships with both manufacturers and customers. </p>
+    </div>
+    <div class="team-member">
+        <img src="{{ url_for('static', filename='images/team-members/wendy-martin.jpg') }}" alt="Wendy Martin">
+        <h3>Wendy Martin</h3>
+        <h2>Vice President</h2>
+        <p>With over 25 years of Information Technology experience, Wendy is a proven leader skilled in delivering innovative solutions and cultivating impactful partnerships. She excels in strategy, networking, and developing effective solutions to build strong customer relationships.</p>
+    </div>
+    <div class="team-member">
+        <img src="{{ url_for('static', filename='images/team-members/robbie-johnson.jpg') }}" alt="Robbie Johnson">
+        <h3>Robbie Johnson</h3>
+        <h2>Outside Sales</h2>
+        <p>With over 4 decades of expertise in the plumbing industry, Robbie began his career with Noland Company rising to Marketing Manager for plumbing, heating and air conditioning at the corporate office. Since joining Soter-Martin in March 2000, he has been a valued representative for the Central Virginia market, leveraging extensive industry knowledge and experience to deliver exceptional service.</p>
+    </div>
+    <div class="team-member">
+        <img src="{{ url_for('static', filename='images/team-members/rob-deloatch.jpg') }}" alt="Rob DeLoatch">
+        <h3>Rob DeLoatch</h3>
+        <h2>Outside Sales</h2>
+        <p>Rob DeLoatch brings over 30 years of experience in plumbing distribution sales to our team, with 20 years in wholesale distribution and the last decade as a manufacturer representative. His well-rounded background gives him a full understanding of residential, multi-family, and commercial plumbing systems.Throughout his career, Rob has worked closely with contractors, wholesalers, and engineers, offering hands-on expertise in product support and system troubleshooting. His practical knowledge and dedication to customer service make him a trusted partner in the field.</p>
+    </div>
+    <div class="team-member">
+        <img src="{{ url_for('static', filename='images/team-members/rachel-turner.jpg') }}" alt="Rachel Turner">
+        <h3>Rachel Turner</h3>
+        <h2>Inside Sales</h2>
+        <p>Rachel is a valued member of our team joining us in early 2024, bringing extensive experience in customer engagement and support. With a background in relationship development and problem-solving, her focus is ensuring customer needs are met with care and efficiency. Known for her dedication to service and strong connections,  she plays an integral role in delivering a seamless and positive experience to our customers.</p>
+    </div>
+    <div class="team-member">
+        <img src="{{ url_for('static', filename='images/team-members/coming-soon.jpg') }}" alt="Coming Soon">
+        <h3>Coming Soon</h3>
+        <h2>Inside Sales</h2>
+        <p></p>
+    </div>
+</section>
 
 {% endblock %}

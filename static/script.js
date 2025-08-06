@@ -1,58 +1,21 @@
-// code for associations.html ------------------------------------------------------
-
-// constants for image, heading, and paragraph for each slide
+// ----------------- Slideshow logic (associations.html) -----------------
 const imgEl = document.getElementById('slide-img');
 const headingEl = document.getElementById('slide-heading');
 const textEl = document.getElementById('slide-text');
-
-// constant for the "next" button
 const nextBtn = document.getElementById('next-btn');
-
-// index to track position in list
 let currentIndex = 0;
 
-// updates the current slide to the next one
-function updateSlide(index) 
-{
-  // take the variables from the slides array
-  const img = slides[index][0];
-  const heading = slides[index][1];
-  const text = slides[index][2];
+function updateSlide(index) {
+    const img = slides[index][0];
+    const heading = slides[index][1];
+    const text = slides[index][2];
 
-  // set the new values
-  imgEl.src = img;
-  headingEl.textContent = heading;
-  textEl.textContent = text;
+    imgEl.src = img;
+    headingEl.textContent = heading;
+    textEl.textContent = text;
 }
 
-// show initial slide (first one in the array)
-updateSlide(currentIndex);
-
-// "next" button to show all the 
-nextBtn.addEventListener('click', function() 
-{
-  currentIndex = (currentIndex + 1) % slides.length;
-  updateSlide(currentIndex);
-});
-
-// Slideshow logic – only runs on pages that have the slideshow
-if (document.getElementById('slide-img')) {
-    const imgEl = document.getElementById('slide-img');
-    const headingEl = document.getElementById('slide-heading');
-    const textEl = document.getElementById('slide-text');
-    const nextBtn = document.getElementById('next-btn');
-    let currentIndex = 0;
-
-    function updateSlide(index) {
-        const img = slides[index][0];
-        const heading = slides[index][1];
-        const text = slides[index][2];
-
-        imgEl.src = img;
-        headingEl.textContent = heading;
-        textEl.textContent = text;
-    }
-
+if (imgEl && headingEl && textEl && nextBtn) {
     updateSlide(currentIndex);
 
     nextBtn.addEventListener('click', function () {
@@ -61,7 +24,7 @@ if (document.getElementById('slide-img')) {
     });
 }
 
-// Manufacturer data and interaction logic
+// ----------------- Manufacturer table logic -----------------
 document.addEventListener("DOMContentLoaded", () => {
     console.log("JS Loaded");
 
@@ -82,28 +45,48 @@ document.addEventListener("DOMContentLoaded", () => {
         "Pioneer": { moq: "No Minimum", freight: "$3,000 on all categories (Central Brass, Olympia & Pioneer)" },
         "Stiebel Eltron": { moq: "No Minimum", freight: "$2,000" },
         "Tigre": { moq: "$250", freight: "$2,000" },
-        "Xylem": { moq: "No Minimum", freight: "50 pumps (includes Laing)" }
+        "Xylem": { moq: "No Minimum", freight: "50 pumps" }
     };
 
     const submitBtn = document.getElementById("submit-btn");
+    const clearBtn = document.getElementById("clear-btn");
     const manufacturerSelect = document.getElementById("manufacturer-select");
-    const resultDiv = document.getElementById("result-display");
+    const tableBody = document.getElementById("table-body");
 
-    if (submitBtn && manufacturerSelect && resultDiv) {
+    if (submitBtn && clearBtn && manufacturerSelect && tableBody) {
         submitBtn.addEventListener("click", () => {
             const selected = manufacturerSelect.value;
 
             if (selected && data[selected]) {
-                resultDiv.innerHTML = `
-                    <h3>${selected}</h3>
-                    <p><strong>Minimum Order Requirement:</strong> ${data[selected].moq}</p>
-                    <p><strong>Freight Allowance:</strong> ${data[selected].freight}</p>
-                `;
+                const row = document.createElement("tr");
+
+                const manufacturerCell = document.createElement("td");
+                manufacturerCell.textContent = selected;
+                manufacturerCell.style.border = "1px solid black";
+                manufacturerCell.style.padding = "8px";
+
+                const moqCell = document.createElement("td");
+                moqCell.textContent = data[selected].moq;
+                moqCell.style.border = "1px solid black";
+                moqCell.style.padding = "8px";
+
+                const freightCell = document.createElement("td");
+                freightCell.textContent = data[selected].freight;
+                freightCell.style.border = "1px solid black";
+                freightCell.style.padding = "8px";
+
+                row.appendChild(manufacturerCell);
+                row.appendChild(moqCell);
+                row.appendChild(freightCell);
+
+                tableBody.appendChild(row);
             } else {
-                resultDiv.innerHTML = `<p>Please select a valid manufacturer.</p>`;
+                alert("Please select a valid manufacturer.");
             }
+        });
+
+        clearBtn.addEventListener("click", () => {
+            tableBody.innerHTML = "";
         });
     }
 });
-``
-

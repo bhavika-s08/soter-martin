@@ -99,64 +99,216 @@ nav a:hover
 }
 
 
-#welcome-section
+#welcome-section-1
 {
     background-color: #11207e;
     text-align: center;
+    font-size: 22px;
     line-height: 1.5;
     color: white;
     padding: 20px;
 }
 
-#values-container
+#welcome-section-2
 {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    background-color: #0a1769;
+    background-color: white;
+    
+    text-align: center;
+    font-size: 22px;
+    line-height: 1.5;
+    color: white;
+    padding: 20px;
 }
+
+#values-container {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.value {
+    width: 200px;
+    height: 200px;
+    perspective: 1000px;
+}
+
+.card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    transition: transform 0.8s;
+}
+
+.value:hover .card-inner {
+    transform: rotateY(180deg);
+}
+
+.card-front, .card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    text-align: center;
+}
+
+.card-front {
+    background-color: #ffffff;
+}
+
+.card-back {
+    background-color: #f0f0f0;
+    transform: rotateY(180deg);
+}
+
 
 /* ------------------------- footer css ------------------------- */ 
 
-footer
-{
-    width: 100%;
-    height: 50px;
-    background-color: #ececec;
-}
-
-
-
-
-.value
-{
-    width: 300px;
-    height: 300px;
-    margin: 20px;
-    padding: 20px;
-    background-color: #f0f0f0;
-    border-radius: 10px;
+#footer {
+    background-color: #0a1769;
+    color: white;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    padding: 25px 15px; 
+    gap: 30px;
+    font-family: "Oswald", sans-serif;
+    margin-top: auto;
+    font-size: 15px; 
 }
+
+.footer-column {
+    flex: 1;
+    min-width: 200px;
+    max-width: 280px;
+}
+
+#footer-logo {
+    max-width: 150px;
+    margin-bottom: 10px; /* reduced spacing */
+}
+
+.social-icons {
+    display: flex;
+    gap: 10px; /* tighter spacing */
+}
+
+.social-icons img {
+    width: 22px;
+    height: 22px;
+    transition: transform 0.2s ease;
+}
+
+.social-icons img:hover {
+    transform: scale(1.15);
+}
+
+.footer-column h3 {
+    margin: 12px 0 6px; /* less margin between headings and content */
+    color: #a3aadd;
+    font-size: 16px;
+}
+
+.footer-column a {
+    color: #a3aadd;
+    text-decoration: underline;
+    transition: color 0.3s ease;
+}
+
+.footer-column a:hover {
+    color: white;
+}
+
+.footer-column p {
+    margin: 4px 0;
+    line-height: 1.4;
+}
+
+/* meet the team css */
+
+#meet-the-team-intro 
+{
+    text-align: center;
+    font-size: 18px;
+    margin-bottom: 30px;
+    color: #11207e;
+    padding: 0 15px;
+}
+
+#meet-the-team-images 
+{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 40px;
+    padding: 20px;
+    margin-bottom: 50px;
+}
+
+.team-member {
+    background-color: #ffffff;
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+    width: 400px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.team-member:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+}
+
+.team-member img {
+    width: 80%;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.team-member h3 {
+    font-size: 18px;
+    color: #1a237e;
+    margin-bottom: 4px;
+}
+
+.team-member h2 {
+    font-size: 16px;
+    color: #3c4791;
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+
+.team-member p {
+    font-size: 16px;
+    color: #555;
+}
+
+
+
 
 
 
 #h1-landing
 {
     font-size: 35px;
-    color: white;
+    color: #11207e;
     margin-bottom: 5px;
 }
 
 #p-landing
 {
     font-size: 20px;
-    color: white;
+    color: #11207e;
     margin-bottom: 5px;
 }
 
@@ -215,8 +367,20 @@ footer
 
 .center
 {
+    display: flex;
     text-align: center;
+    align-items: center;
 }
+
+#center-section 
+{
+    display: flex;
+    flex-direction: row;
+    align-items: center;        
+    justify-content: center;     
+    gap: 15px;
+}
+
 
 #phone-number
 {
@@ -226,7 +390,7 @@ footer
 .container 
 {
 	padding: 2rem;
-    background-color:#0a1769;
+    background-color:#3c4791;
     flex-direction: column;
     display: flex;
     align-items: center;
@@ -390,9 +554,192 @@ footer
     height: 100%;
 }
 
-
-#meet-the-team-intro
+#table-section 
 {
+    display: flex;
+    justify-content: center; 
+    margin-top: 20px;
+    margin-bottom: 80px;
+}
+
+#result-table 
+{
+    border-collapse: collapse;
+}
+
+#result-table th, #result-table td 
+{
+    border: 1px solid black;
+    padding: 10px 50px 10px 50px;
+}
+
+
+
+.center-text {
+  text-align: center;
+}
+
+#manufacturer-select {
+    padding: 8px 28px; /* Less height (8px) and more width (28px) */
+    font-size: 16px;
+    border: 2px solid #0a1769;
+    border-radius: 10px;
+    background-color: #f5f7fa;
+    color: #0a1769;
+    font-family: "Oswald", sans-serif;
+    transition: box-shadow 0.2s ease;
+    min-width: 240px;
+}
+
+#manufacturer-select:focus {
+    outline: none;
+    box-shadow: 0 0 5px rgba(10, 23, 105, 0.5);
+}
+
+/* Button base style */
+#submit-btn,
+#clear-btn {
+    padding: 8px 28px; /* Less height (8px) and more width (28px) */
+    font-size: 16px;
+    border: none;
+    border-radius: 10px;
+    font-family: "Oswald", sans-serif;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+/* Submit button (Add) */
+#submit-btn {
+    background-color: #11207e;
+    color: white;
+}
+
+#submit-btn:hover {
+    background-color: #0a1769;
+    transform: scale(1.03);
+}
+
+/* Clear button */
+#clear-btn {
+    background-color: #a3aadd;
+    color: #04105d;
+}
+
+#clear-btn:hover {
+    background-color: #8b96c7;
+    transform: scale(1.03);
+}
+
+
+
+form {
+    max-width: 1000px;
+    margin: 40px auto;
+    padding: 30px;
+    background-color: #f4f7ff;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    font-family: "Oswald", sans-serif;
+}
+
+form h1 {
     text-align: center;
-    size: 15px;
+    color: #0a1769;
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.form-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px 40px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group label {
+    font-size: 15px;
+    color: #0a1769;
+    margin-bottom: 6px;
+}
+
+input[type="text"],
+textarea {
+    padding: 8px 12px;
+    border: 1px solid #c3d1ff;
+    border-radius: 6px;
+    font-size: 14px;
+    background-color: white;
+    color: #222;
+    transition: border-color 0.3s ease;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+input[type="text"]:focus,
+textarea:focus {
+    border-color: #0a1769;
+    outline: none;
+}
+
+input[type="checkbox"] {
+    margin-right: 6px;
+    transform: scale(1.1);
+    accent-color: #0a1769;
+}
+
+.assistance-with {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.checkbox-row {
+    display: flex;
+    gap: 20px;
+}
+
+.checkbox-row label {
+    display: flex;
+    align-items: center;
+    font-weight: normal;
+    cursor: pointer;
+}
+
+.mailing-list label {
+    font-weight: normal;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+.form-group.full-width {
+    grid-column: 1 / 3;
+}
+
+button[type="submit"] {
+    margin-top: 30px;
+    width: 100%;
+    padding: 12px;
+    background-color: #0a1769;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-family: "Oswald", sans-serif;
+}
+
+button[type="submit"]:hover {
+    background-color: #001357;
 }
